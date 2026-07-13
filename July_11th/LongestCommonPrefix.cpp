@@ -31,6 +31,6 @@ int main() {
     Solution solution;
     vector<string> input = {"flower", "flow", "flight"};
     string result = solution.longestCommonPrefix(input);
-    cout << "Longest Common Prefix: " << result << endl; // Output: "fl"
+    cout << "Longest Common Prefix: " << result << endl; //Output: "fl"
     return 0;
 }
