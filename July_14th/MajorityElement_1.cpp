@@ -32,8 +32,6 @@ public:
         // Return -1 if no majority element is found
         return -1;
     }
-
-    
     
 };
 
