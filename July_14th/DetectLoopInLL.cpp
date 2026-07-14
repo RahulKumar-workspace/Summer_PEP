@@ -29,7 +29,7 @@ struct ListNode
 
 class Solution {
 public:
-    bool hasCycle(ListNode *head) {
+    bool hasCycle_Brute(ListNode *head) {
         unordered_set<ListNode*> mpp;
         ListNode* temp = head;
 
@@ -43,7 +43,16 @@ public:
         return false;
     }
 
-
+    bool hasCycle(ListNode *head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while(fast != NULL &&  fast->next != NULL){
+            slow = slow->next;
+            fast = fast->next->next;
+            if(slow == fast) return true;
+        }
+        return false;
+    }
 };
 
 
@@ -58,6 +67,7 @@ void printLinkedList(ListNode* head) {
 }
 
 int main() {
+
     ListNode* head = new ListNode(1);
     ListNode* second = new ListNode(2);
     ListNode* third = new ListNode(3);
