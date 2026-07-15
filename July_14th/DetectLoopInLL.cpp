@@ -96,6 +96,5 @@ int main() {
     delete third;
     delete fourth;
     delete fifth;
-
     return 0;
 }
